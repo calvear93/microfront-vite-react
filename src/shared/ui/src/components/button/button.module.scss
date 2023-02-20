@@ -1,0 +1,10 @@
+.container {
+	@apply px-6
+		py-2
+		bg-indigo-500
+		font-medium text-sm
+		hover:bg-indigo-600
+		hover:cursor-pointer
+		text-indigo-100
+		rounded;
+}

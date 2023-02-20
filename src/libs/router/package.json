@@ -1,0 +1,13 @@
+{
+	"version": "0.0.1",
+	"name": "@libs/router",
+	"description": "Router manager using React Router v6",
+	"main": "src/main.ts",
+	"module": "src/main.ts",
+	"types": "src/main.ts",
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.4.2"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"expand": true,
+	"nullable": false,
+	"schemaValidate": true,
+	"nestingDelimiter": "_",
+	"packageInfoPrefix": "VITE_APP_"
+}

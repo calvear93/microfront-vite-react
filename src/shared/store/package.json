@@ -1,0 +1,16 @@
+{
+	"version": "0.0.1",
+	"name": "@shared/store",
+	"description": "Redux store using Easy Peasy",
+	"main": "src/main.ts",
+	"module": "src/main.ts",
+	"types": "src/main.ts",
+	"dependencies": {
+		"easy-peasy": "^5.2.0",
+		"react": "^18.2.0",
+		"redux": "^4.2.1"
+	},
+	"devDependencies": {
+		"ts-toolbelt": "^9.6.0"
+	}
+}

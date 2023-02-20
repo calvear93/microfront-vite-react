@@ -1,0 +1,5 @@
+.vscode
+.reports
+.rollup.cache
+build
+dist

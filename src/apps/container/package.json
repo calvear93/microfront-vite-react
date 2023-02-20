@@ -1,0 +1,17 @@
+{
+	"version": "0.0.1",
+	"name": "@apps/container",
+	"scripts": {
+		"start": "vite",
+		"build": "vite build",
+		"preview": "vite build && vite preview"
+	},
+	"type": "module",
+	"dependencies": {
+		"@libs/router": "workspace:*",
+		"@shared/store": "workspace:*",
+		"@shared/ui": "workspace:*",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}

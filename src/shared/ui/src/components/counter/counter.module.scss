@@ -1,0 +1,11 @@
+.container {
+	@apply px-6
+		transition-colors
+		py-2
+		bg-purple-600
+		font-medium text-sm
+		hover:bg-purple-800
+		hover:cursor-pointer
+		text-indigo-100
+		rounded;
+}
