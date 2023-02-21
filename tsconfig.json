@@ -13,7 +13,6 @@
 
 		"experimentalDecorators": false,
 		"emitDecoratorMetadata": false,
-		"preserveSymlinks": true,
 
 		"incremental": true,
 		"sourceMap": true,
