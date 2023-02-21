@@ -1,4 +1,3 @@
-import { StoreProvider, AppStore } from '@shared/store';
 import { BrowserRouter } from '@libs/router';
 import { AppRouter } from './App.router';
 
@@ -11,9 +10,7 @@ import { AppRouter } from './App.router';
 export const App: React.FC = (): JSX.Element => {
 	return (
 		<BrowserRouter basename={import.meta.env.BASE_URL}>
-			<StoreProvider store={AppStore}>
-				<AppRouter />
-			</StoreProvider>
+			<AppRouter />
 		</BrowserRouter>
 	);
 };

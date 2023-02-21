@@ -1,2 +1,1 @@
-export * from 'easy-peasy';
-export * from './store';
+export * from './atoms/sample.atom';

@@ -1,4 +1,6 @@
 import { PropsWithChildren } from 'react';
+import { useAtom } from 'jotai';
+import { sampleAtom } from '@shared/store';
 import styles from './app.layout.module.scss';
 
 export interface AppLayoutProps extends PropsWithChildren {}
@@ -10,14 +12,18 @@ export interface AppLayoutProps extends PropsWithChildren {}
  */
 export const AppLayout: React.FC<AppLayoutProps> = ({
 	children
-}): JSX.Element => (
-	<main className={styles.layout}>
-		<header>header</header>
+}): JSX.Element => {
+	const [message] = useAtom(sampleAtom);
 
-		{children}
+	return (
+		<main className={styles.layout}>
+			<header>header: {message}</header>
 
-		<footer>footer</footer>
-	</main>
-);
+			{children}
+
+			<footer>footer</footer>
+		</main>
+	);
+};
 
 export default AppLayout;

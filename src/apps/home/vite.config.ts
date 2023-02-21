@@ -27,7 +27,14 @@ export default {
 		emptyOutDir: true,
 		minify: true,
 		cssCodeSplit: false,
-		target: process.env.TARGET
+		target: process.env.TARGET,
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					react: ['react', 'react-dom']
+				}
+			}
+		}
 	},
 	plugins: [
 		react(),

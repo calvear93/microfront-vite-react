@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import { useAtom } from 'jotai';
 import { generatePath, Link, Page } from '@libs/router';
-import { useAppActions, useAppState } from '@shared/store';
+import { sampleAtom } from '@shared/store';
 import { routes } from '../App.router';
 import styles from './main.page.module.scss';
 
@@ -15,13 +16,12 @@ const detailPathWithId = (id: number) =>
  * @returns main page
  */
 export const MainPage: React.FC = (): JSX.Element => {
-	const message = useAppState(({ sample: { state } }) => state.message);
-	const update = useAppActions(({ sample: { update } }) => update);
+	const [message, setStatus] = useAtom(sampleAtom);
 
 	// effects
 	useEffect(() => {
-		update(200);
-	}, [update]);
+		setStatus(200);
+	}, [setStatus]);
 
 	// jsx
 	return (

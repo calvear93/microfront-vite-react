@@ -2,7 +2,7 @@
 	"project": "(((project-name)))",
 	"description": "(((project-description)))",
 	"scripts": {
-        "dev": "pnpm run \"/apps:.*\"/ preview",
+		"dev": "pnpm run \"/apps:.*\"/ preview",
 		"apps:container": "env -m debug @apps/container : pnpm --filter [[m.1]]",
 		"apps:home": "env -m debug @apps/home : pnpm --filter [[m.1]]",
 		"test": "vitest --run",
