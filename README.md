@@ -17,14 +17,6 @@
   </a>
 </p>
 
-## ✒ **Description**
-
-<a href="https://reactjs.org/" target="_blank">React</a> is a library for
-building semantic components in a very easy way. It uses modern JavaScript, and supports <a
-href="http://www.typescriptlang.org" target="_blank">TypeScript</a>, and under
-the hood this skeleton uses <a href="https://vitejs.dev/"
-target="_blank">Vite</a>.
-
 ## ⛩ **Structure**
 
 ```bash
@@ -55,31 +47,12 @@ target="_blank">Vite</a>.
     -   `(((project-name)))` project name, i.e. my-project
     -   `(((project-description)))` project description, i.e. API for manage user data
 
-*   Set up your `dev.local.env.json` in `env` folder with:
-
-```json
-{
-	"BASE_URL": "/"
-}
-```
-
 -   Install [NodeJS](https://nodejs.org/es/).
 -   Install [PNPM](https://pnpm.io/installation)
 -   Execute `pnpm install` command.
 -   Run either `pnpm dev` or `pnpm test` commands.
 
-## 📋 **Branches and Environments**
-
-Project has 2 environments.
-
--   **dev (development)**: environment with breaking changes and new features.
--   **release (production)**: release environment.
-
 ## 🧪 **Executing**
-
-Project uses **npm scripts** for eases execution, testing and building.
-Many of these script run on a defined environment, specified after ':', and
-it environment may be 'dev' or 'release'.
 
 | Command                     | Action                           |
 | --------------------------- | -------------------------------- |
@@ -87,18 +60,6 @@ it environment may be 'dev' or 'release'.
 | pnpm apps:container `<cmd>` | executes a container app command |
 | pnpm apps:home `<cmd>`      | executes a home app command      |
 | pnpm test                   | executes tests                   |
-| pnpm test --coverage        | executes tests with coverage     |
-| pnpm lint                   | code format review               |
-| pnpm lint --fix             | code format review/fix           |
-
-## 🧿 **Linting**
-
-Project use linters, for code formatting and code styling normalizing.
-
--   **[eslint](https://eslint.org/)**: tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
--   **[prettier](https://prettier.io/)**: opinionated code formatter
-
-For correct interpretation of linters, is recommended to use [Visual Studio Code](https://code.visualstudio.com/) as IDE and install the plugins in .vscode folder at 'extensions.json'.
 
 ---
 
