@@ -1,6 +1,3 @@
-/// <reference types="vite/client" />
-/// <reference types="@testing-library/jest-dom" />
-
 /**
  * Global types definition for
  * environment variables.

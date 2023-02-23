@@ -29,9 +29,9 @@ export const MainPage: React.FC = (): JSX.Element => {
 			<Link to={detailPath}>Ir a Detail</Link>
 			<Link to={detailPathWithId(123)}>Ir a Detail 123</Link>
 
-			<h1 className='font-bold underline text-brand'>
+			<h1 className='text-brand font-bold underline'>
 				hello world
-				<div className='i-mdi-alarm text-orange-400' />
+				<div className='mdi-alarm text-orange-400' />
 			</h1>
 
 			<h3 className='font-semibold text-teal-600'>{message}</h3>

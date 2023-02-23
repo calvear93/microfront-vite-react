@@ -1,5 +1,6 @@
-.vscode
 .reports
 .rollup.cache
 build
 dist
+package-lock.json
+pnpm-lock.yaml

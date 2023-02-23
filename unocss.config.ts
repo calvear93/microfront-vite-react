@@ -6,7 +6,7 @@ import { transformerDirectives, transformerVariantGroup } from 'unocss';
 const fontFamily = process.env.FONT_FAMILY;
 
 export default {
-	presets: [tailwind({ preflight: true }), icons()],
+	presets: [tailwind({ preflight: true }), icons({ prefix: '' })],
 	transformers: [transformerDirectives(), transformerVariantGroup()],
 	theme: {
 		fontFamily: {

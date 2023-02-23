@@ -21,8 +21,9 @@ coverage
 # npm cache directory
 .npm
 
-# eslint cache
+# linters cache
 .eslintcache
+.stylelintcache
 
 # REPL history
 .node_repl_history

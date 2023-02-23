@@ -1,6 +1,6 @@
-.vscode/**/*
-build/**/*
-dist/**/*
-env/**/*
-deploy/**/*
+.vscode
+build
+dist
+.rollup.cache
 *.js
+*.json

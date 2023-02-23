@@ -13,7 +13,7 @@ const _innerAtom = atom<SampleState>({
 export const sampleAtom = atom(
 	(get) => get(_innerAtom).message,
 	async (_get, set, status: number) => {
-		await new Promise((r) => setTimeout(r, 2000));
+		await new Promise((resolve) => setTimeout(resolve, 2000));
 
 		set(_innerAtom, {
 			status,
