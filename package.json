@@ -8,7 +8,7 @@
 		"test": "vitest --run",
 		"format": "prettier --write **/*.{ts,tsx,css,scss,sass,json,html,md,yml,yaml}",
 		"lint": "eslint src/**/*.{ts,tsx}",
-		"syncpack": "syncpack fix-mismatches -i \"\t\" && syncpack format -i \"\t\"",
+		"syncpack": "syncpack fix-mismatches && syncpack format",
 		"clean": "pnpx del-cli **/node_modules **/dist **/.rollup.cache **/.reports **/*.tsbuildinfo **/debug.log"
 	},
 	"dependencies": {

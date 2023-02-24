@@ -1,4 +1,5 @@
 {
+	"indent": "\t",
 	"dependencyTypes": [
 		"dev",
 		"overrides",
