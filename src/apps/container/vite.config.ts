@@ -26,7 +26,6 @@ export default {
 	},
 	build: {
 		sourcemap: process.env.SOURCEMAP === 'true',
-		emptyOutDir: true,
 		minify: true,
 		target: process.env.TARGET,
 		rollupOptions: {

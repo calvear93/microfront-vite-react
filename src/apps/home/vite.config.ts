@@ -24,7 +24,6 @@ export default {
 	},
 	build: {
 		sourcemap: process.env.SOURCEMAP === 'true',
-		emptyOutDir: true,
 		minify: true,
 		cssCodeSplit: false,
 		target: process.env.TARGET,
