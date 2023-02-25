@@ -5,10 +5,9 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 
-		"types": ["vite/client", "@testing-library/jest-dom"],
-
 		"jsx": "react-jsx",
 		"lib": ["dom", "es2022"],
+		"types": ["vite/client", "@testing-library/jest-dom"],
 
 		"allowJs": false,
 		"checkJs": false,

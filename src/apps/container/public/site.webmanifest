@@ -1,6 +1,6 @@
 {
-	"short_name": "(((app-title)))",
-	"name": "(((app-title)))",
+	"short_name": "Microfront Vite",
+	"name": "Microfront Vite React",
 	"icons": [
 		{
 			"src": "icons/favicon.ico",

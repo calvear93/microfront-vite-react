@@ -39,14 +39,6 @@
 
 ## 📥 **Getting Started**
 
--   Replace globally these terms:
-
-    -   `(((base-path)))` web base path, i.e. web (for get /web/\*)
-    -   `(((app-name)))` app name, i.e. home-web
-    -   `(((app-title)))` app title, i.e. Sample API
-    -   `(((project-name)))` project name, i.e. my-project
-    -   `(((project-description)))` project description, i.e. API for manage user data
-
 -   Install [NodeJS](https://nodejs.org/es/).
 -   Install [PNPM](https://pnpm.io/installation)
 -   Execute `pnpm install` command.
@@ -60,7 +52,3 @@
 | pnpm apps:container `<cmd>` | executes a container app command |
 | pnpm apps:home `<cmd>`      | executes a home app command      |
 | pnpm test                   | executes tests                   |
-
----
-
-⌨ by Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>

@@ -7,6 +7,7 @@ export default {
 	test: {
 		globals: true, // for @testing-library
 		environment: 'jsdom',
+		include: ['src/**/*.(spec|test).{ts,cts,mts,tsx}'],
 		setupFiles: [
 			'@testing-library/jest-dom',
 			'@testing-library/react/dont-cleanup-after-each'
@@ -20,15 +21,13 @@ export default {
 			all: true,
 			reportsDirectory: '.reports/coverage',
 			reporter: ['text', 'text-summary', 'lcov', 'cobertura', 'json'],
-			include: ['src/**/*.{ts,tsx}'],
+			include: ['src/**/*.{ts,cts,mts,tsx}'],
 			exclude: [
-				'**/index.ts',
 				'**/main.tsx',
-				'**/App.tsx',
+				'**/index.{ts,cts,mts}',
 				'**/*.d.ts',
-				'**/*.mock.ts',
-				'**/*.mock.tsx',
-				'**/*.config.ts',
+				'**/*.mock.{ts,cts,mts,tsx}',
+				'**/*.config.{ts,cts,mts}',
 				'**/__tests__',
 				'**/__mocks__',
 				'**/__fixtures__'
@@ -36,14 +35,15 @@ export default {
 		}
 	},
 	plugins: [
-		react(),
-		svg(),
 		checker({
 			typescript: true,
+			enableBuild: true,
 			eslint: {
-				lintCommand: 'eslint src/**/*.{ts,tsx}',
+				lintCommand: 'eslint src/**/*.{ts,cts,mts,tsx}',
 				dev: { logLevel: ['error'] }
 			}
-		})
+		}),
+		react(),
+		svg()
 	]
 } satisfies UserConfigExport;

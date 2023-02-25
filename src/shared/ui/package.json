@@ -1,7 +1,6 @@
 {
 	"version": "0.0.1",
 	"name": "@shared/ui",
-	"description": "Shared UI",
 	"main": "src/main.ts",
 	"module": "src/main.ts",
 	"types": "src/main.ts"

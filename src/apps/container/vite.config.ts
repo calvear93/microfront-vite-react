@@ -1,11 +1,11 @@
 import { normalizePath, UserConfigExport } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import css from 'unocss/vite';
-import fonts from 'vite-plugin-webfont-dl';
-import { checker } from 'vite-plugin-checker';
 import svg from 'vite-plugin-svgr';
-import { createHtmlPlugin as html } from 'vite-plugin-html';
+import fonts from 'vite-plugin-webfont-dl';
 import federation from '@originjs/vite-plugin-federation';
+import { createHtmlPlugin as html } from 'vite-plugin-html';
+import { checker } from 'vite-plugin-checker';
 import { dependencies } from './package.json';
 
 const fontFamily = process.env.FONT_FAMILY;
@@ -25,7 +25,7 @@ export default {
 		cors: true
 	},
 	build: {
-		sourcemap: process.env.GENERATE_SOURCEMAP === 'true',
+		sourcemap: process.env.SOURCEMAP === 'true',
 		emptyOutDir: true,
 		minify: true,
 		target: process.env.TARGET,
@@ -38,17 +38,17 @@ export default {
 		}
 	},
 	plugins: [
-		react(),
-		css(),
-		svg(),
 		checker({
 			typescript: true,
 			enableBuild: true,
 			eslint: {
-				lintCommand: 'eslint src/**/*.{ts,tsx}',
+				lintCommand: 'eslint src/**/*.{ts,cts,mts,tsx}',
 				dev: { logLevel: ['error'] }
 			}
 		}),
+		react(),
+		css(),
+		svg(),
 		fonts([
 			`https://fonts.googleapis.com/css2?family=${fontFamily}:wght@${fontWeight}&display=swap`
 		]),

@@ -1,13 +1,12 @@
 {
-	"project": "(((project-name)))",
-	"description": "(((project-description)))",
+	"project": "microfront-vite-react",
 	"scripts": {
 		"dev": "pnpm run \"/apps:.*\"/ preview",
 		"apps:container": "env -m debug @apps/container : pnpm --filter [[m.1]]",
 		"apps:home": "env -m debug @apps/home : pnpm --filter [[m.1]]",
 		"test": "vitest --run",
-		"format": "prettier --write **/*.{ts,tsx,css,scss,sass,json,html,md,yml,yaml}",
-		"lint": "eslint src/**/*.{ts,tsx}",
+		"lint": "eslint src/**/*.{ts,cts,mts,tsx}",
+		"format": "prettier --write **/*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}",
 		"syncpack": "syncpack fix-mismatches && syncpack format",
 		"clean": "pnpx del-cli **/node_modules **/dist **/.rollup.cache **/.reports **/*.tsbuildinfo **/debug.log"
 	},
@@ -62,12 +61,6 @@
 		"vite-plugin-webfont-dl": "^3.6.0",
 		"vitest": "^0.28.5"
 	},
-	"contributors": [
-		{
-			"name": "Last Name, First Name",
-			"email": "email@domain.com"
-		}
-	],
 	"keywords": [
 		"react",
 		"monorepo",
@@ -82,7 +75,6 @@
 		"unocss",
 		"tailwind"
 	],
-	"private": false,
 	"author": "Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>",
 	"license": "MIT"
 }
