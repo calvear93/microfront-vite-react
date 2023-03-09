@@ -13,6 +13,9 @@ jspm_packages
 # Rollup cache
 .rollup.cache
 
+# Wireit cache
+.wireit
+
 # test reports and coverage directory
 .reports
 __reports__

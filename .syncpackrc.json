@@ -34,6 +34,7 @@
 		"devDependencies",
 		"peerDependencies",
 		"resolutions",
+		"wireit",
 		"contributors",
 		"keywords",
 		"engines",

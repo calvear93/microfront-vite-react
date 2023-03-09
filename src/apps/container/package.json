@@ -2,9 +2,9 @@
 	"version": "0.0.1",
 	"name": "@apps/container",
 	"scripts": {
-		"start": "vite",
-		"build": "vite build",
-		"preview": "vite build && vite preview"
+		"start": "wireit",
+		"build": "wireit",
+		"preview": "wireit"
 	},
 	"type": "module",
 	"dependencies": {
@@ -14,5 +14,31 @@
 		"jotai": "^2.0.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
+	},
+	"wireit": {
+		"start": {
+			"command": "vite"
+		},
+		"build": {
+			"command": "vite build",
+			"clean": "if-file-deleted",
+			"output": [
+				"dist/**",
+				"*.tsbuildinfo"
+			],
+			"files": [
+				"src/**",
+				"tsconfig.json",
+				"vite.config.ts",
+				"!**/*.{spec,test}.*",
+				"!**/__{tests,mocks,fixtures}__/*"
+			]
+		},
+		"preview": {
+			"command": "vite preview",
+			"dependencies": [
+				"build"
+			]
+		}
 	}
 }
