@@ -1,13 +1,11 @@
 {
 	"project": "microfront-vite-react",
 	"scripts": {
-		"dev": "pnpm run \"/apps:.*\"/ preview",
+		"dev": "pnpm run \"/apps:.*\"/ preview --watch",
 		"apps:container": "env -m debug @apps/container : pnpm --filter [[m.1]]",
 		"apps:home": "env -m debug @apps/home : pnpm --filter [[m.1]]",
 		"test": "vitest --run",
-		"lint": "eslint src/**/*.{ts,cts,mts,tsx}",
-		"format": "prettier --write **/*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}",
-		"syncpack": "syncpack fix-mismatches && syncpack format",
+		"format": "wireit",
 		"clean": "pnpx del-cli **/node_modules **/dist **/.rollup.cache **/.reports **/*.tsbuildinfo **./.wireit **/debug.log"
 	},
 	"dependencies": {
@@ -33,18 +31,10 @@
 		"c8": "^7.13.0",
 		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.7.0",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-promise": "^6.1.1",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-redos": "4.5.0-beta.2",
-		"eslint-plugin-regexp": "^1.12.0",
-		"eslint-plugin-sonarjs": "^0.18.0",
-		"eslint-plugin-tailwindcss": "^3.10.1",
 		"eslint-plugin-testing-library": "^5.10.2",
-		"eslint-plugin-unicorn": "^46.0.0",
 		"jsdom": "^21.1.0",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
@@ -61,6 +51,33 @@
 		"vite-plugin-webfont-dl": "^3.6.1",
 		"vitest": "^0.29.2",
 		"wireit": "^0.9.5"
+	},
+	"wireit": {
+		"format": {
+			"command": "prettier --write **/*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}",
+			"files": [
+				"*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}"
+			],
+			"dependencies": [
+				"eslint",
+				"syncpack"
+			]
+		},
+		"eslint": {
+			"command": "eslint src/**/*.{ts,cts,mts,tsx}",
+			"output": [
+				".eslintcache"
+			],
+			"files": [
+				"src/**/*.{ts,cts,mts,tsx}"
+			]
+		},
+		"syncpack": {
+			"command": "syncpack fix-mismatches && syncpack format",
+			"files": [
+				"package.json"
+			]
+		}
 	},
 	"keywords": [
 		"react",
