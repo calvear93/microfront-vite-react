@@ -45,7 +45,6 @@
 		"typescript": "^5.0.3",
 		"unocss": "^0.50.6",
 		"vite": "^4.2.1",
-		"vite-plugin-checker": "^0.5.6",
 		"vite-plugin-html": "^3.2.0",
 		"vite-plugin-svgr": "^2.4.0",
 		"vite-plugin-webfont-dl": "^3.6.4",
@@ -54,7 +53,7 @@
 	},
 	"wireit": {
 		"format": {
-			"command": "prettier --write **/*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}",
+			"command": "prettier --cache --write **/*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}",
 			"files": [
 				"*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}"
 			],
@@ -64,7 +63,7 @@
 			]
 		},
 		"eslint": {
-			"command": "eslint src/**/*.{ts,cts,mts,tsx}",
+			"command": "eslint --cache src/**/*.{ts,cts,mts,tsx}",
 			"output": [
 				".eslintcache"
 			],

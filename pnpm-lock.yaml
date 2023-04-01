@@ -107,9 +107,6 @@ importers:
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)(sass@1.60.0)
-      vite-plugin-checker:
-        specifier: ^0.5.6
-        version: 0.5.6(eslint@8.37.0)(typescript@5.0.3)(vite@4.2.1)
       vite-plugin-html:
         specifier: ^3.2.0
         version: 3.2.0(vite@4.2.1)
@@ -1682,13 +1679,6 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /ansi-escapes@4.3.2:
-    resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      type-fest: 0.21.3
-    dev: true
-
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -2900,15 +2890,6 @@ packages:
       universalify: 2.0.0
     dev: true
 
-  /fs-extra@11.1.1:
-    resolution: {integrity: sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==}
-    engines: {node: '>=14.14'}
-    dependencies:
-      graceful-fs: 4.2.11
-      jsonfile: 6.1.0
-      universalify: 2.0.0
-    dev: true
-
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
@@ -3701,10 +3682,6 @@ packages:
       p-locate: 5.0.0
     dev: true
 
-  /lodash.debounce@4.0.8:
-    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
-    dev: true
-
   /lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
     dev: true
@@ -3719,10 +3696,6 @@ packages:
 
   /lodash.omit@4.5.0:
     resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
-    dev: true
-
-  /lodash.pick@4.4.0:
-    resolution: {integrity: sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==}
     dev: true
 
   /lodash.without@4.4.0:
@@ -4900,10 +4873,6 @@ packages:
       any-promise: 1.3.0
     dev: true
 
-  /tiny-invariant@1.3.1:
-    resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==}
-    dev: true
-
   /tinybench@2.4.0:
     resolution: {integrity: sha512-iyziEiyFxX4kyxSp+MtY1oCH/lvjH3PxFN8PGCDeqcZWAJ/i+9y+nL85w99PxVzrIvew/GSkSbDYtiGVa85Afg==}
     dev: true
@@ -5013,11 +4982,6 @@ packages:
 
   /type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
-    engines: {node: '>=10'}
-    dev: true
-
-  /type-fest@0.21.3:
-    resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
     dev: true
 
@@ -5156,58 +5120,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: true
-
-  /vite-plugin-checker@0.5.6(eslint@8.37.0)(typescript@5.0.3)(vite@4.2.1):
-    resolution: {integrity: sha512-ftRyON0gORUHDxcDt2BErmsikKSkfvl1i2DoP6Jt2zDO9InfvM6tqO1RkXhSjkaXEhKPea6YOnhFaZxW3BzudQ==}
-    engines: {node: '>=14.16'}
-    peerDependencies:
-      eslint: '>=7'
-      meow: ^9.0.0
-      optionator: ^0.9.1
-      stylelint: '>=13'
-      typescript: '*'
-      vite: '>=2.0.0'
-      vls: '*'
-      vti: '*'
-      vue-tsc: '*'
-    peerDependenciesMeta:
-      eslint:
-        optional: true
-      meow:
-        optional: true
-      optionator:
-        optional: true
-      stylelint:
-        optional: true
-      typescript:
-        optional: true
-      vls:
-        optional: true
-      vti:
-        optional: true
-      vue-tsc:
-        optional: true
-    dependencies:
-      '@babel/code-frame': 7.21.4
-      ansi-escapes: 4.3.2
-      chalk: 4.1.2
-      chokidar: 3.5.3
-      commander: 8.3.0
-      eslint: 8.37.0
-      fast-glob: 3.2.12
-      fs-extra: 11.1.1
-      lodash.debounce: 4.0.8
-      lodash.pick: 4.4.0
-      npm-run-path: 4.0.1
-      strip-ansi: 6.0.1
-      tiny-invariant: 1.3.1
-      typescript: 5.0.3
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)
-      vscode-languageclient: 7.0.0
-      vscode-languageserver: 7.0.0
-      vscode-languageserver-textdocument: 1.0.8
-      vscode-uri: 3.0.7
     dev: true
 
   /vite-plugin-html@3.2.0(vite@4.2.1):
@@ -5355,46 +5267,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: true
-
-  /vscode-jsonrpc@6.0.0:
-    resolution: {integrity: sha512-wnJA4BnEjOSyFMvjZdpiOwhSq9uDoK8e/kpRJDTaMYzwlkrhG1fwDIZI94CLsLzlCK5cIbMMtFlJlfR57Lavmg==}
-    engines: {node: '>=8.0.0 || >=10.0.0'}
-    dev: true
-
-  /vscode-languageclient@7.0.0:
-    resolution: {integrity: sha512-P9AXdAPlsCgslpP9pRxYPqkNYV7Xq8300/aZDpO35j1fJm/ncize8iGswzYlcvFw5DQUx4eVk+KvfXdL0rehNg==}
-    engines: {vscode: ^1.52.0}
-    dependencies:
-      minimatch: 3.1.2
-      semver: 7.3.8
-      vscode-languageserver-protocol: 3.16.0
-    dev: true
-
-  /vscode-languageserver-protocol@3.16.0:
-    resolution: {integrity: sha512-sdeUoAawceQdgIfTI+sdcwkiK2KU+2cbEYA0agzM2uqaUy2UpnnGHtWTHVEtS0ES4zHU0eMFRGN+oQgDxlD66A==}
-    dependencies:
-      vscode-jsonrpc: 6.0.0
-      vscode-languageserver-types: 3.16.0
-    dev: true
-
-  /vscode-languageserver-textdocument@1.0.8:
-    resolution: {integrity: sha512-1bonkGqQs5/fxGT5UchTgjGVnfysL0O8v1AYMBjqTbWQTFn721zaPGDYFkOKtfDgFiSgXM3KwaG3FMGfW4Ed9Q==}
-    dev: true
-
-  /vscode-languageserver-types@3.16.0:
-    resolution: {integrity: sha512-k8luDIWJWyenLc5ToFQQMaSrqCHiLwyKPHKPQZ5zz21vM+vIVUSvsRpcbiECH4WR88K2XZqc4ScRcZ7nk/jbeA==}
-    dev: true
-
-  /vscode-languageserver@7.0.0:
-    resolution: {integrity: sha512-60HTx5ID+fLRcgdHfmz0LDZAXYEV68fzwG0JWwEPBode9NuMYTIxuYXPg4ngO8i8+Ou0lM7y6GzaYWbiDL0drw==}
-    hasBin: true
-    dependencies:
-      vscode-languageserver-protocol: 3.16.0
-    dev: true
-
-  /vscode-uri@3.0.7:
-    resolution: {integrity: sha512-eOpPHogvorZRobNqJGhapa0JdwaxpjVvyBp0QIUMRMSf8ZAlqOdEquKuRmw9Qwu0qXtJIWqFtMkmvJjUZmMjVA==}
     dev: true
 
   /w3c-xmlserializer@4.0.0:

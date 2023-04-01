@@ -4,7 +4,6 @@ import css from 'unocss/vite';
 import svg from 'vite-plugin-svgr';
 import federation from '@originjs/vite-plugin-federation';
 import { createHtmlPlugin as html } from 'vite-plugin-html';
-import { checker } from 'vite-plugin-checker';
 import { dependencies } from './package.json';
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -36,14 +35,6 @@ export default {
 		}
 	},
 	plugins: [
-		checker({
-			typescript: true,
-			enableBuild: true,
-			eslint: {
-				lintCommand: 'eslint src/**/*.{ts,cts,mts,tsx}',
-				dev: { logLevel: ['error'] }
-			}
-		}),
 		react(),
 		css(),
 		svg(),
