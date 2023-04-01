@@ -1,0 +1,61 @@
+{
+	"root": true,
+	"env": {
+		"es2022": true,
+		"browser": true,
+		"serviceworker": true
+	},
+	"globals": {
+		"React": true,
+		"JSX": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"reportUnusedDisableDirectives": true,
+	"parserOptions": {
+		"ecmaVersion": 2022,
+		"sourceType": "module",
+		"emitDecoratorMetadata": false,
+		"project": ["tsconfig.json"],
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"@typescript-eslint/eslint-plugin",
+		"prettier",
+		"react",
+		"react-hooks",
+		"testing-library"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/strict",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"plugin:testing-library/react"
+	],
+	"rules": {
+		"prettier/prettier": "warn",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-extraneous-class": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-empty-interface": [
+			"error",
+			{
+				"allowSingleExtends": true
+			}
+		],
+		"react/display-name": "off",
+		"react/prop-types": "off"
+	}
+}

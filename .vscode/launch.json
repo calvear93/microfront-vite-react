@@ -1,0 +1,48 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug in Edge",
+			"type": "msedge",
+			"request": "launch",
+			"url": "http://localhost:3001",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"name": "Debug in Chrome",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:3001",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"name": "Test",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"sourceMaps": true,
+			"restart": true,
+			"runtimeExecutable": "pnpm",
+			"runtimeArgs": ["test", "${fileBasenameNoExtension}"],
+			"skipFiles": ["<node_internals>/**"],
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen"
+		}
+	],
+	"inputs": [
+		{
+			"id": "appName",
+			"type": "pickString",
+			"description": "Select application",
+			"default": "home",
+			"options": ["home"]
+		},
+		{
+			"id": "envName",
+			"type": "pickString",
+			"description": "Select application",
+			"default": "dev",
+			"options": ["dev", "release"]
+		}
+	]
+}

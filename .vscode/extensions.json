@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"christian-kohler.path-intellisense",
+		"clinyong.vscode-css-modules",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"mrmlnc.vscode-scss",
+		"antfu.unocss"
+	]
+}

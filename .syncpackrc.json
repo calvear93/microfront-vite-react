@@ -1,0 +1,44 @@
+{
+	"indent": "\t",
+	"dependencyTypes": [
+		"dev",
+		"overrides",
+		"peer",
+		"pnpmOverrides",
+		"prod",
+		"resolutions",
+		"workspace"
+	],
+	"sortAz": [
+		"dependencies",
+		"devDependencies",
+		"peerDependencies",
+		"resolutions"
+	],
+	"sortFirst": [
+		"version",
+		"project",
+		"name",
+		"title",
+		"description",
+		"repository",
+		"scripts",
+		"main",
+		"module",
+		"types",
+		"exports",
+		"files",
+		"type",
+		"sideEffects",
+		"dependencies",
+		"devDependencies",
+		"peerDependencies",
+		"resolutions",
+		"wireit",
+		"contributors",
+		"keywords",
+		"engines",
+		"browserlist",
+		"private"
+	]
+}

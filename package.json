@@ -1,0 +1,98 @@
+{
+	"project": "microfront-vite-react",
+	"scripts": {
+		"dev": "pnpm run \"/apps:.*\"/ preview --watch",
+		"apps:container": "env -m debug @apps/container : pnpm --filter [[m.1]]",
+		"apps:home": "env -m debug @apps/home : pnpm --filter [[m.1]]",
+		"test": "vitest --run",
+		"format": "wireit",
+		"clean": "pnpx del-cli **/node_modules **/dist **/.rollup.cache **/.reports **/*.tsbuildinfo **./.wireit **/debug.log"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@calvear/env": "^2.6.1",
+		"@iconify-json/mdi": "^1.1.50",
+		"@originjs/vite-plugin-federation": "^1.2.1",
+		"@testing-library/dom": "^9.2.0",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@types/node": "^18.15.11",
+		"@types/react": "^18.0.31",
+		"@types/react-dom": "^18.0.11",
+		"@types/testing-library__jest-dom": "^5.14.5",
+		"@typescript-eslint/eslint-plugin": "^5.57.0",
+		"@typescript-eslint/parser": "^5.57.0",
+		"@vitejs/plugin-react-swc": "^3.2.0",
+		"@vitest/coverage-c8": "^0.29.8",
+		"c8": "^7.13.0",
+		"eslint": "^8.37.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-testing-library": "^5.10.2",
+		"jsdom": "^21.1.1",
+		"postcss": "^8.4.21",
+		"prettier": "^2.8.7",
+		"sass": "^1.60.0",
+		"syncpack": "^9.8.4",
+		"tailwindcss": "^3.3.1",
+		"tslib": "^2.5.0",
+		"typescript": "^5.0.3",
+		"unocss": "^0.50.6",
+		"vite": "^4.2.1",
+		"vite-plugin-checker": "^0.5.6",
+		"vite-plugin-html": "^3.2.0",
+		"vite-plugin-svgr": "^2.4.0",
+		"vite-plugin-webfont-dl": "^3.6.4",
+		"vitest": "^0.29.8",
+		"wireit": "^0.9.5"
+	},
+	"wireit": {
+		"format": {
+			"command": "prettier --write **/*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}",
+			"files": [
+				"*.{ts,cts,mts,tsx,css,scss,sass,json,html,md,yml,yaml}"
+			],
+			"dependencies": [
+				"eslint",
+				"syncpack"
+			]
+		},
+		"eslint": {
+			"command": "eslint src/**/*.{ts,cts,mts,tsx}",
+			"output": [
+				".eslintcache"
+			],
+			"files": [
+				"src/**/*.{ts,cts,mts,tsx}"
+			]
+		},
+		"syncpack": {
+			"command": "syncpack fix-mismatches && syncpack format",
+			"files": [
+				"package.json"
+			]
+		}
+	},
+	"keywords": [
+		"react",
+		"monorepo",
+		"microfront",
+		"federation",
+		"pnpm",
+		"vite",
+		"vitest",
+		"typescript",
+		"spa",
+		"pwa",
+		"unocss",
+		"tailwind"
+	],
+	"author": "Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>",
+	"license": "MIT"
+}

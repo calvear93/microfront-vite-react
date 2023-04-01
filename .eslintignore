@@ -1,0 +1,6 @@
+.vscode
+build
+dist
+.rollup.cache
+*.js
+*.json

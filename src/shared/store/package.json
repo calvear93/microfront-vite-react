@@ -1,0 +1,10 @@
+{
+	"version": "0.0.1",
+	"name": "@shared/store",
+	"main": "src/main.ts",
+	"module": "src/main.ts",
+	"types": "src/main.ts",
+	"devDependencies": {
+		"jotai": "^2.0.2"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"short_name": "Microfront Vite",
+	"name": "Microfront Vite React",
+	"icons": [
+		{
+			"src": "icons/favicon.ico",
+			"sizes": "48x48",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "icons/android-chrome-192x192.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "icons/android-chrome-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "any maskable"
+		}
+	],
+	"start_url": ".",
+	"display": "minimal-ui",
+	"theme_color": "#007a33",
+	"background_color": "#ebeff2"
+}
